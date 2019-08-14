@@ -37,6 +37,7 @@ factory-boy = ">=2.10.0"
 flake8 = "*"
 Pygments = "*"
 Sphinx = "*"
+grip = "*"
 
 [packages]
 ansible-vault = "*"
