@@ -1,6 +1,6 @@
 # ~/.tmuxinator/terraform-aws-s3-cloudfront-redirect.yml
 name: terraform-aws-s3-cloudfront-redirect
-root: <%= ENV["PROJECTS"] %>/src/github.com/luismayta/terraform-aws-s3-cloudfront-redirect
+root: ./
 # Optional tmux socket
 # socket_name: foo
 
