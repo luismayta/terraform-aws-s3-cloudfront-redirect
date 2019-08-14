@@ -22,7 +22,7 @@ categories:
 #logo: docs/logo.png
 
 # License of this project
-license: "Apache-2.0"
+license: "Apache2"
 
 # Canonical GitHub repo
 github_repo: luismayta/terraform-aws-s3-cloudfront-redirect

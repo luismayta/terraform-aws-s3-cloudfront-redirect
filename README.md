@@ -8,7 +8,7 @@ Terraform module to provision an AWS S3 Redirect.
 
 ---
 
-This project is part of our comprehensive ["SweetOps"](https://luismayta.com) modules of terraform.
+This project is part of our comprehensive ["LuisMayta"](https://luismayta.com) modules of terraform.
 
 
 
