@@ -14,19 +14,19 @@ test.help:
 	@echo '        test.syntax               Run all syntax in code'
 	@echo ''
 
-test: clean
-	@if [[ -z "${run}" ]]; then \
+test:
+	@if [ -z "${run}" ]; then \
 		make test.help;\
 	fi
-	@if [[ -n "${run}" ]]; then \
-		$(DOCKER_TEST) run --rm app bash -c "pytest tests/${run}";\
+	@if [ -n "${run}" ]; then \
+		$(docker-test-run) run --rm app bash -c "pytest tests/${run}";\
 	fi
 
-test.all: clean
+test.all:
 	$(DOCKER_TEST) run --rm app bash -c "pytest "
 
-test.lint: clean
-	pre-commit run --all-files --verbose
+test.lint:
+	$(PIPENV_RUN) pre-commit run --all-files --verbose
 
-test.syntax: clean
+test.syntax:
 	@echo $(MESSAGE) Running tests $(END)
