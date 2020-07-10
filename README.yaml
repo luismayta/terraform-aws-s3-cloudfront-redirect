@@ -22,19 +22,19 @@ categories:
 #logo: docs/logo.png
 
 # License of this project
-license: "Apache2"
+license: 'Apache2'
 
 # Canonical GitHub repo
-github_repo: luismayta/terraform-aws-s3-cloudfront-redirect
+github_repo: equipindustry/terraform-aws-s3-cloudfront-redirect
 
 # Badges to display
 badges:
-  - name: "Build Status"
-    image: "https://travis-ci.org/luismayta/terraform-aws-s3-cloudfront-redirect.svg?branch=master"
-    url: "https://travis-ci.org/luismayta/terraform-aws-s3-cloudfront-redirect"
-  - name: "Latest Release"
-    image: "https://img.shields.io/github/release/luismayta/terraform-aws-s3-cloudfront-redirect.svg"
-    url: "https://travis-ci.org/luismayta/terraform-aws-s3-cloudfront-redirect/releases"
+  - name: 'Build Status'
+    image: 'https://travis-ci.org/equipindustry/terraform-aws-s3-cloudfront-redirect.svg?branch=master'
+    url: 'https://travis-ci.org/equipindustry/terraform-aws-s3-cloudfront-redirect'
+  - name: 'Latest Release'
+    image: 'https://img.shields.io/github/release/equipindustry/terraform-aws-s3-cloudfront-redirect.svg'
+    url: 'https://travis-ci.org/equipindustry/terraform-aws-s3-cloudfront-redirect/releases'
 
 # Short description of this project
 description: |-
@@ -44,7 +44,7 @@ description: |-
 usage: |-
   ```hcl
     module "redirect" {
-      source              = "git::https://github.com/luismayta/terraform-aws-s3-cloudfront-redirect.git?ref=develop"
+      source              = "git::https://github.com/equipindustry/terraform-aws-s3-cloudfront-redirect.git?ref=develop"
       fqdn                = var.fqdn-root
       redirect_target     = var.fqdn
       ssl_certificate_arn = data.aws_acm_certificate.domain.arn
@@ -54,8 +54,8 @@ usage: |-
       force_destroy       = "true"
 
       providers           = {
-        "aws.main"        = aws.main
-        "aws.cloudfront"  = aws.cloudfront
+        aws.main        = aws.main
+        aws.cloudfront  = aws.cloudfront
       }
     }
   ```
@@ -63,10 +63,10 @@ usage: |-
   Full working example can be found in [example](./example) folder.
 
 include:
-  - "docs/include/targets.md"
-  - "docs/include/terraform.md"
+  - 'docs/include/targets.md'
+  - 'docs/include/terraform.md'
 
 # Contributors to this project
 contributors:
-  - name: "Luis Mayta"
-    github: "luismayta"
+  - name: 'Luis Mayta'
+    github: 'luismayta'

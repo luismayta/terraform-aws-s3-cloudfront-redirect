@@ -1,5 +1,5 @@
 module "redirect" {
-  source = "github.com/luismayta/terraform-aws-s3-cloudfront-redirect"
+  source = "github.com/equipindustry/terraform-aws-s3-cloudfront-redirect"
 
   fqdn                = var.fqdn-root
   redirect_target     = var.fqdn
