@@ -7,10 +7,10 @@ module "redirect" {
 
   refer_secret = "${base64sha512("SUPER-REFER-SECRET${var.fqdn-root}*AGAIN")}"
 
-  force_destroy = "true"
+  force_destroy = true
 
   providers = {
-    "aws.main"       = aws.main
-    "aws.cloudfront" = aws.cloudfront
+    aws.main       = aws.main
+    aws.cloudfront = aws.cloudfront
   }
 }
