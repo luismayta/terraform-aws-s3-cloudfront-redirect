@@ -1,9 +1,9 @@
 provider "aws" {
-  alias = "main"
+  alias   = "main"
   version = "~> 2.9"
 }
 
 provider "aws" {
-  alias = "cloudfront"
+  alias   = "cloudfront"
   version = "~> 2.9"
 }

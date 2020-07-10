@@ -1,16 +1,16 @@
 resource "aws_s3_bucket" "main" {
   provider = "aws.main"
-  bucket   = "${var.fqdn}"
+  bucket   = var.fqdn
   acl      = "private"
-  policy   = "${data.aws_iam_policy_document.bucket_policy.json}"
+  policy   = data.aws_iam_policy_document.bucket_policy.json
 
   website {
-    redirect_all_requests_to = "${var.redirect_target}"
+    redirect_all_requests_to = var.redirect_target
   }
 
-  force_destroy = "${var.force_destroy}"
+  force_destroy = var.force_destroy
 
-  tags = "${merge("${var.tags}",map("Name", "${var.fqdn}"))}"
+  tags = merge(var.tags, map("Name", var.fqdn))
 }
 
 data "aws_iam_policy_document" "bucket_policy" {
@@ -32,12 +32,12 @@ data "aws_iam_policy_document" "bucket_policy" {
       variable = "aws:UserAgent"
 
       values = [
-        "${var.refer_secret}"
+        var.refer_secret
       ]
     }
 
     principals {
-      type = "*"
+      type        = "*"
       identifiers = ["*"]
     }
 
