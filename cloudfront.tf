@@ -1,10 +1,10 @@
 # resource "aws_cloudfront_origin_access_identity" "main" {
-#   provider = "aws.cloudfront"
+#   provider = aws.cloudfront
 #   comment = "cf-origin-${var.fqdn}"
 # }
 
 resource "aws_cloudfront_distribution" "main" {
-  provider     = "aws.cloudfront"
+  provider     = aws.cloudfront
   http_version = "http2"
 
   origin {
